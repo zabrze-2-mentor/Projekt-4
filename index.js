@@ -22,14 +22,16 @@ app.use('/api/users', users)
 mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
+   useFindAndModify: false
 }).then(() => {
     console.log("Connected to DB!!!")
 }).catch((error) => {
-    handleError(error);
+    console.log(error);
+    handleError(error)
     console.log("Connection error!!")
 })
 
-
-
-app.listen(3000);
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`listening port ${port}`)
+})
