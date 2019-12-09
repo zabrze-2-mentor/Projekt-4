@@ -5,8 +5,11 @@
   <meta charset="utf-8">
 
 <!--CSS BOOTSTRAP-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- META -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <!--NASZ STYL-->
     <link rel="stylesheet" href="style.css" type="text/css">
      <!--NASZE SKRYPTY-->
@@ -32,16 +35,23 @@
     </div>
     <!--FORM -->
     <div class="container" id="formDiv">
-        <h2>Zarajestruj się</h2>
-        <form id="regForm">
-            <p>Imię</p>
-            <input type="text" name="name">
-            <p>Login</p>
-            <input type="text" name="login">
-            <p>Hasło</p>
-            <input type="text" name="password">
-            <p>Wybierz ulubionego Pokemona</p>
-            <select name="favPoke">
+        <div class="row justify-content-center">
+        <form class="form" id="regForm">
+            <h2>Zarajestruj się</h2>
+            <div class="form-group col-sm-6 col-xl-4 offset-sm-3 offset-xl-4">
+                <label for="name">Imię</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="form-group col-sm-6 col-xl-4 offset-sm-3 offset-xl-4">
+                <label for="login">Login</label>
+                <input type="text" name="login" class="form-control" id="login">
+            </div>
+            <div class="form-group col-sm-6 col-xl-4 offset-sm-3 offset-xl-4">
+                <label for="password">Hasło</label>
+                <input type="text" name="password" class="form-control" id="password">
+            </div>
+            <select class="poke-select">
+                    <option selected>Wybierz ulubionego pokemona!</option>
                     <option value="bulbasaur">Bulbasaur</option>
                     <option value="charmander">Charmander</option>
                     <option value="squirtle">Squirtle</option>
@@ -60,12 +70,14 @@
                     <option value="drowzee">Drowzee</option>
                     <option value="voltorb">Voltorb</option>
                     <option value="geodude">Geodude</option>
-            </select>
-            <p>Napisz kilka słów o sobie</p>
-            <textarea rows="4" cols="50" name="userInfo" form="regForm"></textarea>
-            <br>
+                  </select>
+            <div class="form-group col-xl-8 offset-xl-2">
+                <label for="userInfo">Napisz kilka słów o sobie</label>
+                <textarea name="userInfo" class="form-control" id="userInfo" rows="3"></textarea>
+            </div>
             <input class="registerButton" type="submit" value="Zarejestruj się">   
         </form>
+        </div>
     </div>
 
     <!--FOOTER BANNER -->
@@ -99,6 +111,16 @@
         </div>
 
 
-
+<!--SKRYPTY Z BOOTSTRAP-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<!--KONIEC SKRYPTÓW Z BOOTSTRAP-->
 </body>
 </html>
