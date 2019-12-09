@@ -1,21 +1,22 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const bodyParser=require('body-parser')
+const bodyParser = require('body-parser')
 //Middlewares
 app.use(bodyParser.json())
 
 
 //Import Routes
-const home=require('./routes/home')
-const example=require('./routes/example')
-const users=require('./routes/users')
+const home = require('./routes/home')
+const example = require('./routes/example')
+const users = require('./routes/users')
+const pokemon = require('./routes/addPokemon')
 
 //Routes
 app.use('/', home)
 app.use('/api/example', example)
-app.use('/api/users',users)
-
+app.use('/api/users', users)
+app.use('/api/addPokemon', pokemon)
 
 //connect to DB
 mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.mongodb.net/test?retryWrites=true&w=majority', {
@@ -23,11 +24,10 @@ mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.
     useUnifiedTopology: true
 }).then(() => {
     console.log("Connected to DB!!!")
-}).catch((error)=>{
+}).catch((error) => {
     handleError(error);
     console.log("Connection error!!")
 })
-
 
 
 app.listen(3000);
