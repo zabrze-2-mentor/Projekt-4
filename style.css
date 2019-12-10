@@ -1,0 +1,63 @@
+#navbar{
+    background-color: rgb(92, 81, 149);
+    height: 3rem;
+    text-align: center;
+    align-content: center;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: 600;
+    color: white;
+
+}
+#navbar .col-2{
+    height: 100%;
+    padding-top: 0.8rem;
+}
+
+#navbar .col-2:hover{
+    background-color: rgb(50, 47, 67);
+    cursor: pointer;
+}
+
+#footer{
+    background-color: rgb(92, 81, 149);
+    height: 15rem;
+    text-align: center;
+    align-content: center;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    color: white;
+}
+#footer span{
+    font-weight: 600;
+}
+
+#footer p{
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+h2 {
+    margin: 3rem 0;
+}
+
+#regForm{
+    width:80%;
+    text-align: center;
+}
+#formDiv p{
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.poke-select{
+    margin: 1rem 0;
+}
+
+.registerButton{
+background-color: rgb(92, 81, 149);
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
