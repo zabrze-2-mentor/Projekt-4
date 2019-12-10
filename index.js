@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const cors = require('cors')
+
 //Middlewares
 app.use(bodyParser.json())
 app.use(cors())
@@ -11,12 +12,13 @@ app.use(cors())
 const home = require('./routes/home')
 const example = require('./routes/example')
 const users = require('./routes/users')
+const pokemon = require('./routes/addPokemon')
 
 //Routes
 app.use('/', home)
 app.use('/api/example', example)
 app.use('/api/users', users)
-
+app.use('/api/addPokemon', pokemon)
 
 //connect to DB
 mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.mongodb.net/test?retryWrites=true&w=majority', {
@@ -35,3 +37,4 @@ const port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log(`listening port ${port}`)
 })
+
