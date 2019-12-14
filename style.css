@@ -39,6 +39,7 @@ h2 {
     margin: 3rem 0;
 }
 
+#loginForm,
 #regForm{
     width:80%;
     text-align: center;
@@ -52,6 +53,7 @@ h2 {
     margin: 1rem 0;
 }
 
+.loginButton,
 .registerButton{
 background-color: rgb(92, 81, 149);
   border: none;
