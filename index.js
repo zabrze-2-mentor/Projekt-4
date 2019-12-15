@@ -17,6 +17,7 @@ const delPokemon = require('./routes/remPokemon')
 const patPokemon = require('./routes/patPokemon')
 const register=require('./routes/register')
 const getPokemon = require('./routes/getPokemon')
+const myPokemon = require('./routes/myPokemon')
 
 //Routes
 app.use('/', home)
@@ -27,6 +28,7 @@ app.use('/api/remPokemon', delPokemon)
 app.use('/api/patPokemon', patPokemon)
 app.use('/api/register', register)
 app.use('/api/getPokemon', getPokemon)
+app.use('/api/myPokemon', myPokemon)
 
 //connect to DB
 mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.mongodb.net/test?retryWrites=true&w=majority', {
