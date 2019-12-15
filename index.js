@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const passportSetup = require("./config/passport-setup")
 
 //Middlewares
 app.use(bodyParser.json())
@@ -16,6 +18,7 @@ const pokemon = require('./routes/addPokemon')
 const delPokemon = require('./routes/remPokemon')
 const patPokemon = require('./routes/patPokemon')
 const register=require('./routes/register')
+const authGoogle = require('./routes/authGoogle')
 
 //Routes
 app.use('/', home)
@@ -25,6 +28,7 @@ app.use('/api/addPokemon', pokemon)
 app.use('/api/remPokemon', delPokemon)
 app.use('/api/patPokemon', patPokemon)
 app.use('/api/register', register)
+app.use('/auth/google', authGoogle)
 
 //connect to DB
 mongoose.connect('mongodb+srv://PokemonTrainer:BulbasaurRocks@pokemon-gfjwb.gcp.mongodb.net/test?retryWrites=true&w=majority', {
